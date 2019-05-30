@@ -4,12 +4,12 @@
         <div class="header-top-inner">
             <nav>
                 <ul>
-                    <li><a href="#">главная</a></li>
-                    <li><a href="#">о доме</a></li>
+                    <li><a href="/">главная</a></li>
+                    <li><a href="{% url 'about' %}">о доме</a></li>
                     <li><a class="orange" href="#">проектная декларация</a></li>
 
                     <li><a href="#">ипотека</a></li>
-                    <li><a href="#">новости</a></li>
+                    <li><a href="{% url 'news' 'all' %}">новости</a></li>
 
                     <li><a href="#">контакты</a></li>
 

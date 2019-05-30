@@ -1,0 +1,28 @@
+{% extends 'basic.html' %}
+{% load static %}
+{% block content %}
+   <div class="breadcrumbs">
+        <ul>
+            <li><a href="/">Главная</a></li>
+            <li><a href="{% url 'news' 'all' %}">Новости</a></li>
+            <li>{{ news_item.short_descr }}</li>
+        </ul>
+
+    </div>
+<section class="all-news">
+     <h1 class="heading-big mb-20">{{ news_item.short_descr }}</h1>
+    <div class="news-single">
+        {{ news_item.showcaseFullInfo |safe }}
+    </div>
+</section>
+{% endblock %}
+
+{% block js %}
+
+{% endblock %}
+
+
+
+
+
+

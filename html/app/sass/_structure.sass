@@ -36,7 +36,7 @@ $link-color-blue-hover: #0082dc
   text-transform: uppercase
   //text-align: center
   color: $text-color-orange
-  padding: 20px 0 0 0
+  margin-bottom: 20px
 
 .mb-20
   margin-bottom: 20px
@@ -111,6 +111,12 @@ $link-color-blue-hover: #0082dc
   display: flex
   justify-content: space-between
 .flours-arrow
+  display: flex
+  align-items: center
+  img:first-child
+    margin-right: 10px
+  img:last-child
+     margin-left: 10px
   a
     font-family: "Bebas Neue Regular", sans-serif
     font-size: 28px
@@ -119,12 +125,24 @@ $link-color-blue-hover: #0082dc
     &:hover
       text-decoration: underline
       color: $link-color-blue-hover
-  .arrow-left
-      &:before
-        content: '\2039'
-  .arrow-right
-      &:after
-        content: '\203A'
 
 
+.albums
+  min-height: calc(100vh - 247px)
+  margin-bottom: 40px
 
+.albums-items
+  display: grid
+  grid-template-columns: 1fr 1fr 1fr
+  grid-gap: 20px
+
+  .photos-item
+    img
+      border: none
+      width: 320px
+
+
+.album-items
+  display: grid
+  grid-template-columns: 1fr 1fr 1fr
+  grid-gap: 20px
