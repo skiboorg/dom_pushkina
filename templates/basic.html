@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<!-- by SKIBORG https://vk.com/skib_org-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>ДОМ-2</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+<body>
+<header>
+
+    {% include 'header.html' %}
+
+</header>
+<div class="container">
+    {% block content %}
+    {% endblock %}
+</div>
+{% include 'footer.html' %}
+
+</body>
+</html>

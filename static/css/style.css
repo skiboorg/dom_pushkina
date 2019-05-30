@@ -380,9 +380,7 @@ nav {
   display: -ms-flexbox;
   display: flex; }
   .news-item img {
-    margin-right: 20px;
-    width: 130px !important;
-    height: 87px !important; }
+    margin-right: 20px; }
   .news-item span {
     color: #343434;
     font-family: "Bebas Neue Regular", sans-serif;

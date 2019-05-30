@@ -13,6 +13,34 @@ $link-color-blue-hover: #0082dc
   padding-left: 39px
   margin: 0 auto
 
+.breadcrumbs
+  margin: 40px 0
+  ul
+    display: flex
+    li
+      font-family: 'Arial',sans-serif
+      font-size: 15px
+      color: $link-color-blue
+      &:after
+        content: '>'
+        margin: 0 5px
+      a
+        color: $link-color-blue
+    li:last-child
+      &:after
+        content: ''
+
+.heading-big
+  font-family: "Bebas Neue Regular",sans-serif
+  font-size: 40px
+  text-transform: uppercase
+  //text-align: center
+  color: $text-color-orange
+  padding: 20px 0 0 0
+
+.mb-20
+  margin-bottom: 20px
+
 .heading
   font-family: "Bebas Neue Regular",sans-serif
   font-size: 34px
@@ -20,6 +48,18 @@ $link-color-blue-hover: #0082dc
   text-align: center
   color: $text-color-orange
   padding: 20px 0
+
+.heading-small
+  font-family: "Bebas Neue Regular",sans-serif
+  font-size: 22px
+  text-transform: uppercase
+  text-align: center
+  color: $text-color-orange
+  padding: 10px 0
+
+  span
+    color: $link-color-blue
+    font-size: 28px
 
 .big-link
   font-family: "Bebas Neue Regular", sans-serif
@@ -42,6 +82,49 @@ $link-color-blue-hover: #0082dc
 
   &:hover
     box-shadow: 0 2px 0 0 #00adff
+
+
+.btn-callback
+  font-family: "Bebas Neue Regular", sans-serif
+  font-size: 22px
+  background: linear-gradient(0deg, rgb(125,229,255) 0%, rgb(216,247,255) 100%)
+  border: 1px solid #0084a0
+  border-radius: 3px
+  color: #015f6d
+  position: absolute
+  top: 72px
+  z-index: 1
+  right: 130px
+  padding: 10px 25px
+  cursor: pointer
+
+  &:hover
+    box-shadow: 0 2px 0 0 #00adff
+
+
+
+.flours
+  margin-bottom: 40px
+
+.flours-arrows
+  margin-top: 40px
+  display: flex
+  justify-content: space-between
+.flours-arrow
+  a
+    font-family: "Bebas Neue Regular", sans-serif
+    font-size: 28px
+    color: $link-color-blue
+    text-decoration: none
+    &:hover
+      text-decoration: underline
+      color: $link-color-blue-hover
+  .arrow-left
+      &:before
+        content: '\2039'
+  .arrow-right
+      &:after
+        content: '\203A'
 
 
 
