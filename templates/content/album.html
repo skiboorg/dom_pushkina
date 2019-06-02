@@ -1,0 +1,37 @@
+{% extends 'basic.html' %}
+{% load static %}
+{% block content %}
+    <div class="breadcrumbs">
+        <ul>
+            <li><a href="/">Главная</a></li>
+            <li><a href="{% url 'albums' %}">Фотостройка</a></li>
+            <li>{{ photo_album.name }}</li>
+        </ul>
+
+    </div>
+ <section class="albums">
+     <h1 class="heading-big">{{ photo_album.name }}</h1>
+
+    <div class="album-items">
+            {% for image in photo_album.photo_set.all %}
+
+            <div class="album-item">
+              <a class="example-image-link" href="{{ image.image.url }}" data-lightbox="example-1"><img class="example-image" src="{{ image.image.url }}" alt="{{ photo_album.name }}"></a>
+            </div>
+        {% endfor %}
+
+
+        </div>
+
+</section>
+
+{% endblock %}
+
+{% block js %}
+    <script defer src="{% static 'js/lightbox.js' %}"></script>
+{% endblock %}
+
+
+
+
+

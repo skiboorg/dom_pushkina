@@ -1,7 +1,7 @@
 {% extends 'basic.html' %}
 {% load static %}
 {% block content %}
- <div class="breadcrumbs">
+    <div class="breadcrumbs">
         <ul>
             <li><a href="/">Главная</a></li>
             <li><a href="#">Планировки этажей</a></li>
@@ -9,44 +9,45 @@
         </ul>
 
     </div>
-<section class="flours">
-     <h1 class="heading-big">{{ flour_level }} этаж</h1>
-    <p class="heading-small">по наличию квартир звоните пожалуйста по телефону: <span>+7 (351)777-49-50</span></p>
-    <div class="flour-items">
-         <div class="flour-item">
-             <h3 class="heading-small">Секция 1</h3>
-              <a class="example-image-link" href="{% static 'img/flours/' %}{{ flour_level }}-1.jpg" data-lightbox="flour" data-title="Секция 1"><img class="example-image" src="{% static 'img/flours/' %}{{ flour_level }}-1.jpg" alt="image-1"></a>
+    <section class="flours">
+        <h1 class="heading-big">{{ flour_level }} этаж</h1>
+        <p class="heading-small">по наличию квартир звоните пожалуйста по телефону: <span>+7 (351)777-49-50</span></p>
+        <div class="flour-items">
+            <div class="flour-item">
+                <h3 class="heading-small">Секция 1</h3>
+                <a class="example-image-link" href="{% static 'img/flours/' %}{{ flour_level }}-1.jpg" data-lightbox="flour" data-title="Секция 1"><img class="example-image" src="{% static 'img/flours/' %}{{ flour_level }}-1.jpg" alt="image-1"></a>
 
-
-        </div>
-        <div class="flour-item">
-             <h3 class="heading-small">Секция 2</h3>
-            <a class="example-image-link" href="{% static 'img/flours/' %}{{ flour_level }}-2.jpg" data-lightbox="flour" data-title="Секция 2"><img class="example-image" src="{% static 'img/flours/' %}{{ flour_level }}-2.jpg" alt="image-1"></a>
-
-        </div>
-        <div class="flours-arrows">
-            {% if prev_level %}
-            <div class="flours-arrow">
-                <img src="{% static 'img/left-arrow.png' %}" alt="">
-                <a href="{% url 'flour' prev_level %}">{{ prev_level }} этаж</a>
 
             </div>
-            {% endif %}
-            {% if next_level %}
-                {% if not prev_level %}
-                         <div style="margin-left: auto;" class="flours-arrow">
+            <div class="flour-item">
+                <h3 class="heading-small">Секция 2</h3>
+                <a class="example-image-link" href="{% static 'img/flours/' %}{{ flour_level }}-2.jpg" data-lightbox="flour" data-title="Секция 2"><img class="example-image" src="{% static 'img/flours/' %}{{ flour_level }}-2.jpg" alt="image-1"></a>
+
+            </div>
+        </div>
+            <div class="flours-arrows">
+                {% if prev_level %}
+                    <div class="flours-arrow">
+                        <img src="{% static 'img/left-arrow.png' %}" alt="">
+                        <a href="{% url 'flour' prev_level %}">{{ prev_level }} этаж</a>
+
+                    </div>
+                {% endif %}
+                {% if next_level %}
+                    {% if not prev_level %}
+                        <div style="margin-left: auto;" class="flours-arrow">
                     {% else %}
                         <div class="flours-arrow">
-                 {% endif %}
+                    {% endif %}
                 <a href="{% url 'flour' next_level %}" >{{ next_level }} этаж</a>
-                 <img src="{% static 'img/right-arrow.png' %}" alt="">
+                <img src="{% static 'img/right-arrow.png' %}" alt="">
+                </div>
+                {% endif %}
+
+                </div>
             </div>
-         {% endif %}
 
-        </div>
-    </div>
-
-</section>
+    </section>
 
 {% endblock %}
 

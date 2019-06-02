@@ -28,3 +28,12 @@ def news(request,slug):
     else:
         news_item = News.objects.get(slug=slug)
         return render(request, 'content/news_single.html', locals())
+
+def albums(request):
+    photo_albums = PhotoAlbum.objects.all()
+    return render(request, 'content/albums.html', locals())
+
+def album(request,slug):
+    photo_album = PhotoAlbum.objects.get(name_slug=slug)
+    print(photo_album.photo_set.all().first().image.url)
+    return render(request, 'content/album.html', locals())

@@ -160,11 +160,11 @@
             {% for album in albums %}
                 <div class="photos-item">
                     <img style="display: block;" src="{{ album.image.url }}" alt="">
-                    <a href="#" class="big-link">{{ album.name }}а</a>
+                    <a href="{% url 'album'  album.name_slug%}" class="big-link">{{ album.name }}</a>
                 </div>
             {% endfor %}
         </div>
-        <a class="big-link" href="#">Все фотоальбомы</a>
+        <a class="big-link" href="{% url 'albums' %}">Все фотоальбомы</a>
     </div>
 </section>
 <section class="location">

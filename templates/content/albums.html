@@ -1,0 +1,35 @@
+{% extends 'basic.html' %}
+{% load static %}
+{% block content %}
+    <div class="breadcrumbs">
+        <ul>
+            <li><a href="/">Главная</a></li>
+
+            <li>Фотостройка</li>
+        </ul>
+
+    </div>
+    <section class="albums">
+        <h1 class="heading-big">фотостройка</h1>
+
+        <div class="albums-items">
+            {% for album in photo_albums %}
+                <div class="photos-item">
+                    <img style="display: block;" src="{{ album.image.url }}" alt="">
+                    <a href="{% url 'album'  album.name_slug%}" class="big-link">{{ album.name }}а</a>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+
+{% endblock %}
+
+{% block js %}
+
+{% endblock %}
+
+
+
+
+
+
